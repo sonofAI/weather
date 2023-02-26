@@ -21,7 +21,7 @@ srchBtn.addEventListener("click", getWeather);
 async function getWeather() {
     if (locationEl.value) {
         
-        const coordinates = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${locationEl.value}&appid=${apiKey}`).then(response => response.json()).catch(error => console.error(error));
+        const coordinates = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${locationEl.value}&appid=${apiKey}`).then(response => response.json()).catch(error => console.error(error));
         
         if (coordinates.length != 0) {
             errorM.style.display = "none";
